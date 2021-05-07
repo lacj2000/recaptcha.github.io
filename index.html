@@ -8,7 +8,7 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
       window.onload = function() {
-      var recaptcha = document.forms["form"]["g-recaptcha-response"];
+      var recaptcha = document.forms["myform"]["g-recaptcha-response"];
       recaptcha.required = true;
       recaptcha.oninvalid = function(e) {
       // fazer algo, no caso to dando um alert
@@ -18,7 +18,7 @@
      </script>
   </head>
   <body>
-    <form action="" method="POST">
+    <form action="" class="myform" method="POST">
       <div class="g-recaptcha" data-sitekey="6LemacoaAAAAAA1Ax-ZZYYTHO1My87BINZwtbdw3"></div>
       <br/>
       <input type="submit" value="Submit">
