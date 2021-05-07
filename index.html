@@ -6,9 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>reCAPTCHA demo: Simple page</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+      window.onload = function() {
+      var recaptcha = document.forms["form"]["g-recaptcha-response"];
+      recaptcha.required = true;
+      recaptcha.oninvalid = function(e) {
+      // fazer algo, no caso to dando um alert
+      alert("Por favor complete o captchaba");
+        }
+     }
+     </script>
   </head>
   <body>
-    <form action="#" method="POST">
+    <form action="" method="POST">
       <div class="g-recaptcha" data-sitekey="6LemacoaAAAAAA1Ax-ZZYYTHO1My87BINZwtbdw3"></div>
       <br/>
       <input type="submit" value="Submit">
