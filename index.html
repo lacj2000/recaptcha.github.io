@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html:5>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
       window.onload = function() {
-      var recaptcha = document.forms["myform"]["g-recaptcha-response"];
+      var recaptcha = document.forms[".myform"]["g-recaptcha-response"];
       recaptcha.required = true;
       recaptcha.oninvalid = function(e) {
       // fazer algo, no caso to dando um alert
